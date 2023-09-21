@@ -3,11 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Blog Space</title>
 </head>
 <body>
-  <h1>Blog post app</h1>
+  <nav class="top-nav">
+    <h2 class="nav-title">BlogSpace</h2>
+  </nav>
+  <h1 class="spacer"></h1>
+  <form action="submit" id="new-blog-post" class="new-blog-post">
+    <div class="new-blog">
+      <label for="new-blog-title">Blog title</label>
+      <input 
+        class="blog-text-input" 
+        id="blog-text-input" 
+        type="text" 
+        name="new-blog-title">
+      <label for="new-blog-body">Write your blog</label>
+      <textarea 
+        class="blog-textarea"  
+        id="blog-textarea" 
+        type="textatea" 
+        name="new-blog-title" 
+        rows="4" 
+        cols="50">
+      </textarea>
+    </div>
+  </form>
+  <div id="blog-posts"></div>
   <script src="script.js"></script>
 </body>
 </html>
