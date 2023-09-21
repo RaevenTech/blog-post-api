@@ -38,6 +38,11 @@ nav>h2 {
 
 label {
   margin-bottom: 0em;
+  font-weight: 600;
+}
+
+.blog-text-input {
+  height: 2em;
 }
 
 .blog-textarea {
@@ -57,4 +62,18 @@ label {
 
 #blog-body {
   margin-top: 0em;
+}
+
+.submit-post-btn {
+  width: 150px;
+  height: 25px;
+  margin: 0em .5em 1em;
+  color: lightgray;
+  background-color: rgb(66, 64, 64);
+  border: none;
+}
+
+.submit-post-btn.hover {
+  cursor: pointer;
+  background-color: darkgray;
 }
