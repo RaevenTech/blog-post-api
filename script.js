@@ -1,7 +1,10 @@
 const blogPostsEl = document.getElementById("blog-posts")
+const newBlogPost = document.getElementById("new-blog-post")
+
 const baseURL = "https://apis.scrimba.com/jsonplaceholder/"
 
 let postsArr = []
+
 
 const renderPosts = () => {
   let html = ""
@@ -16,6 +19,7 @@ const renderPosts = () => {
   blogPostsEl.innerHTML = html
 }
 
+
 fetch(baseURL + "posts", {method: "GET"})
   .then(resp => resp.json())
   .then(data => {
@@ -25,7 +29,7 @@ fetch(baseURL + "posts", {method: "GET"})
   })
 
 
-  document.getElementById("new-blog-post").addEventListener("submit", function(e){
+  newBlogPost.addEventListener("submit", function(e){
     e.preventDefault()
     const postTitle = document.getElementById("blog-text-input").value
     const postBody = document.getElementById("blog-textarea").value
@@ -46,5 +50,6 @@ fetch(baseURL + "posts", {method: "GET"})
       .then(postData => {
           postsArr.unshift(postData)
           renderPosts()
+          newBlogPost.reset()
       })
   })

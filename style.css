@@ -47,10 +47,13 @@ label {
 
 .blog-text-input {
   height: 2em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .blog-textarea {
   resize: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
 }
 
 #blog-posts {
